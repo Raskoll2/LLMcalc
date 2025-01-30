@@ -476,4 +476,5 @@ if __name__ == "__main__":
             print(f"GPU Offload Percentage: {100-data['offload_percentage']:.1f}%")
         if data['tk/s']:
             print(f"Estimated tk/s: {data['tk/s']:.2f}")
-        print(f"Max Context Length: {int(data['context'])} tk")
+        if data['context']:
+            print(f"Max Context Length: {int(data['context'])} tk")
